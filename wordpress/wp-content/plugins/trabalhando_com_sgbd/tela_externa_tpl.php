@@ -1,3 +1,14 @@
+
+<?php
+$texto = '';
+if(isset($_GET['campo'])){
+    $texto = $_GET['campo'];
+}
+?>
+<form method="get">
+    <input type="text" name="campo" placeholder="Buscar" value="<?php echo $texto; ?>">
+    <input type="submit" name="buscar" value="Buscar">
+</form>
 <?php 
 if(count($contatos) > 0){
     echo "<table border=1>
